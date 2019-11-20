@@ -12,15 +12,15 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
-        <ul class="main-nav__list site">
-          <li class="site__item">
-            <a class="site__item-link">Главная</a>
+        <ul class="main-nav__list navigation-list">
+          <li class="navigation-list__item">
+            <a class="navigation-list__link">Главная</a>
           </li>
-          <li class="site__item">
-              <a href="catalog.html" class="site__item-link">Каталог продукции</a>
+          <li class="navigation-list__item">
+              <a href="catalog.html" class="navigation-list__link">Каталог продукции</a>
           </li>
-          <li class="site__item">
-              <a href="form.html" class="site__item-link">Подбор программы</a>
+          <li class="navigation-list__item">
+              <a href="form.html" class="navigation-list__link">Подбор программы</a>
           </li>
         </ul>
         </div>
@@ -28,11 +28,10 @@
     </header>
 
     <main class="main">
-      <section class="description">
-        <div class="description__background-image"></div>
-        <h1 class="description__title">Функциональное питание для котов</h1>
-        <p class="description__text">Занялся собой? Займись котом!</p>
-        <div class="description__image-product"></div>
+      <section class="page-description">
+        <h1 class="page-description__title">Функциональное питание для котов</h1>
+        <p class="page-description__text">Занялся собой? Займись котом!</p>
+        <div class="page-description__image-product"></div>
       </section>
 
       <section class="services">
@@ -95,33 +94,32 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__logo">
-        <img class="footer__logo-image" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Лого Cat Energy">
-      </div>
-      <div class="footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы в Вконтакте</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" >
-              <span class="visually-hidden">Мы в Инстаграм</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" >
-              <span class="visually-hidden">Мы в Фейсбуке</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <a class="footer__link">
+        <img class="footer__logo-image" src="https://via.placeholder.com/128x24" width="128" height="24"
+          alt="Лого Cat Energy">
+      </a>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы в Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+            <span class="visually-hidden">Мы в Инстаграм</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+          </a>
+        </li>
+      </ul>
       <div class="footer__developer">
         <p class="footer__developer-name">HTML Academy</p>
-        <span class="footer__developer-logo">
-          <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive"></a>
-        </span>
+        <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">Логотип HTML Academy</span>
+        </a>
       </div>
     </footer>
   </body>
