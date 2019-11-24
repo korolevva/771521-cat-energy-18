@@ -15,6 +15,7 @@
 .form__input,
 .form__textarea {
   @include font-title(16px, 18px);
+  // @include placeholder {color: $tundora;}
   text-align: left;
   color: $tundora;
   border: 1px solid $color-border-input;
@@ -29,15 +30,8 @@
   border: 2px solid $color-border-input-active;
 }
 
-.form__input:error {
+.form__input--erorr {
   border: 2px solid $color-border-input-error;
-}
-
-.form__input,
-.form__textarea {
-  @include placeholder {
-    color: $tundora;
-  }
 }
 
 .form__legend {

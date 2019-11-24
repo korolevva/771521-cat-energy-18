@@ -1,7 +1,7 @@
 .button {
   @include button-reset;
-  @include font-title (14px, 18px);
-  color: #fff;
+  @include font-title(14px, 18px);
+  color: #ffffff;
   background-color: $apple;
 }
 

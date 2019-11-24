@@ -21,10 +21,10 @@
 
 $title-font: "Oswald", sans-serif;
 $main-font: "Arial", sans-serif;
-$cod-gray: #111;
-$mine-shaft: #222;
-$tundora: #444;
-$white: #fff;
+$cod-gray: #111111;
+$mine-shaft: #222222;
+$tundora: #444444;
+$white: #ffffff;
 $apple: #68b738;
 $grass: #5eaa2f;
 $light-grey: #f2f2f2;
@@ -78,23 +78,23 @@ $color-border-input-error: #ff8282;
   border: none;
 }
 
-@mixin placeholder {
-  &.placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
-  }
-  &::-webkit-input-placeholder {
-    @content;
-  }
-}
+// @mixin placeholder {
+//   &.placeholder {
+//     @content;
+//   }
+//   &:-moz-placeholder {
+//     @content;
+//   }
+//   &::-moz-placeholder {
+//     @content;
+//   }
+//   &:-ms-input-placeholder {
+//     @content;
+//   }
+//   &::-webkit-input-placeholder {
+//     @content;
+//   }
+// }
 
 @import "visually-hidden";
 @import "main-nav.scss";

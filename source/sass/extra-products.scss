@@ -15,16 +15,16 @@
 }
 
 .extra-products__amount {
+  @include font-main(14px, 14px);
   margin: 0;
   padding: 0;
-  @include font-main(14px, 14px);
   text-align: left;
 }
 
 .extra-products__price {
+  @include font-main(14px, 14px);
   margin: 0;
   padding: 0;
-  @include font-main(14px, 14px);
   text-align: right;
 }
 
