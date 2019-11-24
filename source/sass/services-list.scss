@@ -1,0 +1,26 @@
+.services-list {
+  @include list-reset;
+}
+
+.services-list__item {
+  background-color: $light-grey;
+}
+
+.services-list__title {
+  @include font-title (24px, 37px);
+  text-align: left;
+}
+
+.services-list__description {
+  @include font-main (14px, 18px);
+  text-align: left;
+}
+
+.services-list__link {
+  @include font-title (16px, 16px);
+  text-align: left;
+}
+
+.services-list__link:active {
+  color: $black-transparency-30;
+}

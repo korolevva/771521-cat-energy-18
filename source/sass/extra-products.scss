@@ -1,0 +1,34 @@
+.extra-products__list {
+  @include list-reset;
+}
+
+.extra-products__title {
+  @include font-title(24px, 24px);
+  text-align: left;
+  text-transform: none;
+}
+
+.extra-products__type {
+  @include font-title(16px, 16px);
+  text-align: left;
+  color: $mine-shaft;
+}
+
+.extra-products__amount {
+  margin: 0;
+  padding: 0;
+  @include font-main(14px, 14px);
+  text-align: left;
+}
+
+.extra-products__price {
+  margin: 0;
+  padding: 0;
+  @include font-main(14px, 14px);
+  text-align: right;
+}
+
+.extra-products__button {
+  font-size: 16px;
+  font-weight: 20px;
+}

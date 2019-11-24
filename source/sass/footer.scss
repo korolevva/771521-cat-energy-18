@@ -1,0 +1,12 @@
+.footer {
+  background-color: $light-grey;
+}
+
+.footer__developer-link {
+  @include font-title(16px, 16px);
+  text-align: left;
+}
+
+.footer__developer-link:active {
+  color: $black-transparency-30;
+}

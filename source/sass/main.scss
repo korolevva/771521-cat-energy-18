@@ -1,0 +1,5 @@
+.main__title {
+  @include font-title(36px, 60px);
+  text-align: left;
+  text-transform: none;
+}

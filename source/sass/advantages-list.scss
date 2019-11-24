@@ -1,0 +1,8 @@
+.advantages-list {
+  @include list-reset;
+}
+
+.advantages-list__description {
+  @include font-main(14px, 18px);
+  text-align: left;
+}

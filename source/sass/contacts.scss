@@ -1,0 +1,9 @@
+.contacts__invite {
+  @include font-title(16px, 20px);
+  text-align: left;
+}
+
+.contacts__address {
+  @include font-main(14px, 20px);
+  text-align: left;
+}

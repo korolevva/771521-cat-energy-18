@@ -1,0 +1,31 @@
+.living-example {
+  background-color: $light-grey;
+}
+
+.living-example__title {
+  @include font-title(36px, 36px);
+  text-align: left;
+  text-transform: none;
+}
+
+.living-example__description {
+  @include font-main(14px, 18px);
+  text-align: left;
+}
+
+.living-example__definition-term {
+  @include font-title(24px, 24px);
+}
+
+.living-example__definition-description {
+  @include font-main(12px, 12px);
+}
+
+.living-example__cost {
+  @include font-title(14px, 20px);
+}
+
+.living-example__button {
+  @include font-title(16px, 20px);
+  @include button-reset;
+}
