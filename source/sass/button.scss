@@ -1,0 +1,16 @@
+.button {
+  @include button-reset;
+  @include font-title(14px, 18px);
+  color: #ffffff;
+  background-color: $apple;
+}
+
+.button:hover,
+.button:focus {
+  background-color: $grass;
+}
+
+.button:active {
+  background-color: $grass;
+  color: $black-transparency-30;
+}

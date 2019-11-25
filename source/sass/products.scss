@@ -1,0 +1,54 @@
+.products__list {
+  @include list-reset;
+}
+
+.products__title {
+  @include font-title(16px, 20px);
+  text-align: left;
+}
+
+.products__link {
+  @include font-title(16px, 20px);
+}
+
+.products__definition-term {
+  @include font-main(12px, 16px);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.products__definition-description {
+  @include font-main(12px, 16px);
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.products__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.products__button--show {
+  color: $tundora;
+  background-color: $light-grey;
+}
+
+.products__button--show:hover,
+.products__button--show:focus {
+  background-color: $gallery;
+}
+
+.products__button--show:active {
+  color: $grey-transparency-30;
+  background-color: $gallery;
+}
+
+.products__title--center {
+  text-align: center;
+}
+
+.products__text {
+  @include font-main(12px, 16px);
+}

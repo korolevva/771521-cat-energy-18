@@ -1,0 +1,14 @@
+.page-description {
+  background-color: $apple;
+}
+
+.page-description__title {
+  @include font-title(36px, 36px);
+  color: $white;
+  text-transform: none;
+}
+
+.page-description__text {
+  @include font-title(14px, 14px);
+  color: $white;
+}
