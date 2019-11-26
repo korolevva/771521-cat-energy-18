@@ -1,0 +1,39 @@
+@mixin font-title($font-size, $line-height) {
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $title-font;
+  text-align: center;
+  color: $cod-gray;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin font-main($font-size, $line-height) {
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $main-font;
+  text-align: center;
+  color: $tundora;
+  font-weight: 400;
+}
+
+@mixin button-reset {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin fieldset-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}

@@ -15,23 +15,28 @@
 .form__input,
 .form__textarea {
   @include font-title(16px, 18px);
-  // @include placeholder {color: $tundora;}
   text-align: left;
   color: $tundora;
   border: 1px solid $color-border-input;
 }
 
 .form__input:hover,
-.form__input:focus {
+.form__textarea:hover {
   border: 1px solid $color-border-input;
 }
 
-.form__input:active {
+.form__input:focus,
+.form__textarea:focus {
   border: 2px solid $color-border-input-active;
 }
 
 .form__input--erorr {
   border: 2px solid $color-border-input-error;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: $tundora;
 }
 
 .form__legend {
