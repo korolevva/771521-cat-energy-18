@@ -1,126 +1,22 @@
-@font-face {
-  font-family: "Oswald";
-  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Oswald";
-  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Arial";
-  src: url("../fonts/arialmt.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-$title-font: "Oswald", sans-serif;
-$main-font: "Arial", sans-serif;
-$cod-gray: #111111;
-$mine-shaft: #222222;
-$tundora: #444444;
-$white: #ffffff;
-$apple: #68b738;
-$grass: #5eaa2f;
-$light-grey: #f2f2f2;
-$gallery: #ebebeb;
-$black-transparency-60: rgba(17, 17, 17, 0.6);
-$black-transparency-30: rgba(17, 17, 17, 0.3);
-$black-another-transparency-30: rgba(34, 34, 34, 0.3);
-$white-transparency-30: rgba(255, 255, 255, 0.3);
-$grey-transparency-30: rgba(68, 68, 68, 0.3);
-$color-border-input: #cdcdcd;
-$color-border-input-active: $tundora;
-$color-border-input-error: #ff8282;
-
-@mixin font-title($font-size, $line-height) {
-  font-style: normal;
-  font-size: $font-size;
-  line-height: $line-height;
-  font-family: $title-font;
-  text-align: center;
-  color: $cod-gray;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-@mixin font-main($font-size, $line-height) {
-  font-style: normal;
-  font-size: $font-size;
-  line-height: $line-height;
-  font-family: $main-font;
-  text-align: center;
-  color: $tundora;
-  font-weight: 400;
-}
-
-@mixin button-reset {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-}
-
-@mixin list-reset {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-@mixin fieldset-reset {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-// @mixin placeholder {
-//   &.placeholder {
-//     @content;
-//   }
-//   &:-moz-placeholder {
-//     @content;
-//   }
-//   &::-moz-placeholder {
-//     @content;
-//   }
-//   &:-ms-input-placeholder {
-//     @content;
-//   }
-//   &::-webkit-input-placeholder {
-//     @content;
-//   }
-// }
-
-@import "visually-hidden";
-@import "main-nav.scss";
-@import "navigation-list.scss";
-@import "page-description.scss";
-@import "button.scss";
-@import "services-list.scss";
-@import "advantages.scss";
-@import "advantages-list.scss";
-@import "living-example.scss";
-@import "footer.scss";
-@import "contacts.scss";
-@import "social.scss";
-@import "main.scss";
-@import "products.scss";
-@import "extra-products.scss";
-@import "present.scss";
-@import "profile.scss";
-@import "form.scss";
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-a {
-  text-decoration: none;
-}
+@import "variables.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+@import "global.scss";
+@import "blocks/visually-hidden";
+@import "blocks/main-nav.scss";
+@import "blocks/navigation-list.scss";
+@import "blocks/page-description.scss";
+@import "blocks/button.scss";
+@import "blocks/services-list.scss";
+@import "blocks/advantages.scss";
+@import "blocks/advantages-list.scss";
+@import "blocks/living-example.scss";
+@import "blocks/footer.scss";
+@import "blocks/contacts.scss";
+@import "blocks/social.scss";
+@import "blocks/main.scss";
+@import "blocks/products.scss";
+@import "blocks/extra-products.scss";
+@import "blocks/present.scss";
+@import "blocks/profile.scss";
+@import "blocks/form.scss";
