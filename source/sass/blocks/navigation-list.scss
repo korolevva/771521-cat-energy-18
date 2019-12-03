@@ -1,9 +1,10 @@
 .navigation-list {
   @include list-reset;
+  text-align: center;
 }
 
 .navigation-list__link {
-  @include font-title (20px, 20px);
+  @include font-title(20px, 20px);
   font-weight: 500;
 }
 
@@ -14,4 +15,16 @@
 
 .navigation-list__link:active {
   color: $black-transparency-30;
+}
+
+@media (min-width: $tablet-width) {
+  .navigation-list {
+    display: flex;
+  }
+
+  .navigation-list__link {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+  }
 }

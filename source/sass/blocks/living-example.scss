@@ -1,14 +1,26 @@
 .living-example {
+  min-height: 705px;
+  outline: 1px solid green;
+}
+
+.living-example .container {
   background-color: $light-grey;
+  outline: 1px solid red;
 }
 
 .living-example__title {
+  @include indents-reset;
   @include font-title(36px, 36px);
   text-align: left;
   text-transform: none;
 }
 
+.living-example__definition-list {
+  display: flex;
+}
+
 .living-example__description {
+  @include indents-reset;
   @include font-main(14px, 18px);
   text-align: left;
 }
@@ -22,10 +34,84 @@
 }
 
 .living-example__cost {
+  @include indents-reset;
   @include font-title(14px, 20px);
 }
 
 .living-example__button {
   @include font-title(16px, 20px);
   @include button-reset;
+}
+
+.living-example__wrapper-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .living-example {
+    min-height: 1081px;
+  }
+
+  .living-example .container {
+    background-color: $white;
+  }
+
+  .living-example__wrapper-toggle .container {
+    background-color: $light-grey;
+  }
+
+  .living-example__wrapper-content .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .living-example__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .living-example__description {
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .living-example__definition-term {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .living-example__definition-description {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .living-example__cost {
+    width: 180px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .living-example__button {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .living-example {
+    min-height: 651px;
+  }
+
+  .living-example__wrapper-content {
+    background-color: $light-grey;
+  }
+
+  .living-example__wrapper-content .container {
+    background-color: transparent;
+  }
 }

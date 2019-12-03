@@ -1,9 +1,67 @@
+.contacts {
+  outline: 1px solid blue;
+  background-color: $white;
+}
+
+.contacts__wrapper-address {
+  display: flex;
+  justify-content: space-between;
+  min-height: 114px;
+
+  outline: 1px solid red;
+}
+
 .contacts__invite {
+  @include indents-reset;
   @include font-title(16px, 20px);
   text-align: left;
 }
 
 .contacts__address {
+  @include indents-reset;
   @include font-main(14px, 20px);
   text-align: left;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__invite {
+    width: 160px;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__wrapper-address {
+    min-height: 201px;
+
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .contacts__address {
+    width: 160px;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+  }
+
+  .contacts__address {
+    text-align: left;
+  }
+
+  .contacts__wrapper-address {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    min-height: 201px;
+    background-color: $white;
+  }
 }

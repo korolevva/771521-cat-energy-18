@@ -2,7 +2,51 @@
   @include list-reset;
 }
 
+.advantages-list__item {
+  outline: 1px solid tomato;
+}
+
 .advantages-list__description {
   @include font-main(14px, 18px);
   text-align: left;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages-list__description {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages-list__item {
+    width: 339px;
+    min-height: 230px; //временное свойство
+    margin-right: 30px;
+    margin-bottom: 72px;
+  }
+
+  .advantages-list__item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages-list__item {
+    width: 245px;
+    margin-right: 80px;
+    margin-bottom: 24px;
+  }
+
+  .advantages-list__item:nth-child(2n) {
+    margin-right: 80px;
+  }
+
+  .advantages-list__item:nth-child(4n) {
+    margin-right: 0;
+  }
 }

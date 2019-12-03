@@ -3,24 +3,66 @@
 }
 
 .services-list__item {
+  min-height: 266px; //временное свойство
+  margin-bottom: 20px;
+
+  outline: 1px solid blue;
   background-color: $light-grey;
 }
 
+.services-list__item:last-child {
+  margin-bottom: 0;
+}
+
 .services-list__title {
-  @include font-title (24px, 37px);
+  @include indents-reset;
+  @include font-title(24px, 37px);
   text-align: left;
 }
 
 .services-list__description {
-  @include font-main (14px, 18px);
+  @include font-main(14px, 18px);
   text-align: left;
 }
 
 .services-list__link {
-  @include font-title (16px, 16px);
+  @include font-title(16px, 16px);
   text-align: left;
 }
 
 .services-list__link:active {
   color: $black-transparency-30;
+}
+
+@media (min-width: $tablet-width) {
+  .services-list__item {
+    min-height: 372px; //временное свойство
+    margin-bottom: 30px;
+  }
+
+  .services-list__title {
+    font-size: 36px;
+  }
+
+  .services-list__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .services-list__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .services-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .services-list__item {
+    width: 572px;
+    margin-bottom: 0;
+  }
 }
