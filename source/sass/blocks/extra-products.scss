@@ -1,17 +1,35 @@
+.extra-products {
+  width: 100%;
+  outline: 1px solid blue;
+}
+
 .extra-products__list {
   @include list-reset;
 }
 
 .extra-products__title {
+  @include indents-reset;
   @include font-title(24px, 24px);
   text-align: left;
   text-transform: none;
 }
 
 .extra-products__type {
+  @include indents-reset;
   @include font-title(16px, 16px);
   text-align: left;
   color: $mine-shaft;
+
+  outline: 1px solid red;
+}
+
+.extra-products__dl-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra-products__definition-list {
+  @include indents-reset;
 }
 
 .extra-products__amount {
@@ -29,6 +47,93 @@
 }
 
 .extra-products__button {
+  width: 100%;
   font-size: 16px;
   font-weight: 20px;
+
+  outline: 1px solid red;
+}
+
+@media (min-width: $tablet-width) {
+  .extra-products__item {
+    padding: 38px;
+
+    outline: 1px solid orange;
+  }
+
+  .extra-products__item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    outline: 1px solid blue;
+  }
+
+  .extra-products__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .extra-products__type {
+    margin-right: auto;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra-products__amount,
+  .extra-products__price {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .extra-products__amount {
+    margin-right: 52px;
+  }
+
+  .extra-products__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra-products {
+    width: auto;
+  }
+
+  .extra-products__item {
+    padding: 27px;
+
+    outline: 1px solid orange;
+  }
+
+  .extra-products__item-wrapper {
+    justify-content: flex-start;
+  }
+
+  .extra-products__dl-wrapper {
+    justify-content: flex-start;
+  }
+
+  .extra-products__type {
+    width: 325px;
+  }
+
+  .extra-products__amount {
+    outline: 1px solid blue;
+  }
+
+  .extra-products__price {
+    width: 81px;
+  }
+
+  .extra-products__button {
+    width: 245px;
+    min-height: 40px;
+  }
+
+  .extra-products__amount,
+  .extra-products__price {
+    text-align: left;
+  }
 }

@@ -1,3 +1,7 @@
+.form__fieldset-wrapper {
+  outline: 1px solid blue;
+}
+
 .form__fieldset {
   @include fieldset-reset;
 }
@@ -45,6 +49,10 @@
   text-transform: none;
 }
 
+.form__legend--comment {
+  display: block;
+}
+
 .form__button {
   font-size: 16px;
   line-height: 20px;
@@ -56,4 +64,50 @@
 
 .form__input + .form__label:active {
   color: $black-another-transparency-30;
+}
+
+@media (min-width: $tablet-width) {
+  .form__label,
+  .form__input,
+  .form__textarea {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__legend {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .form__button {
+    font-size: 20px;
+  }
+
+  .profile__text {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .form__list--additional-goods {
+    display: flex;
+    flex-wrap: wrap;
+    outline: 1px solid red;
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__fieldset-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__list--contacts {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
