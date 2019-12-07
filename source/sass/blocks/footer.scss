@@ -1,12 +1,42 @@
-.footer {
-  background-color: $light-grey;
+.footer__developer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  outline: 1px solid red;
 }
 
 .footer__developer-link {
   @include font-title(16px, 16px);
   text-align: left;
+  text-transform: none;
 }
 
 .footer__developer-link:active {
   color: $black-transparency-30;
+}
+
+.footer__wrapper-bottom {
+  min-height: 197px; //временно
+
+  outline: 1px solid blue;
+}
+
+.footer__link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 54px; //временно
+
+  outline: 1px solid red;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__wrapper-bottom {
+    display: flex;
+    justify-content: space-between;
+    min-height: 197px; //временно
+  }
 }

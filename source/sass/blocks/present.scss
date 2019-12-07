@@ -1,8 +1,47 @@
 .present {
+  min-height: 289px;
+  width: 100%;
+  padding-top: 159px;
+
   background-color: $apple;
 }
 
 .present__description {
+  @include indents-reset;
   @include font-main(16px, 20px);
+  width: 165px;
+  margin: 0 auto;
   color: $white;
+
+  outline: 1px solid white;
+}
+
+@media (min-width: $tablet-width) {
+  .present {
+    min-height: 200px;
+    padding-top: 75px;
+    padding-left: 424px;
+
+    background-color: $apple;
+  }
+
+  .present__description {
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .present {
+    width: auto;
+    min-height: 289px;
+    padding-top: 190px;
+    padding-right: 43px;
+    padding-left: 43px;
+
+    background-color: $apple;
+  }
+
+  .present__description {
+    text-align: center;
+  }
 }

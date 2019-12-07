@@ -1,14 +1,84 @@
 .page-description {
+  min-height: 500px; //временное сво-во
+  outline: 1px solid blue;
+}
+
+.page-description__wrapper {
   background-color: $apple;
 }
 
 .page-description__title {
+  @include indents-reset;
   @include font-title(36px, 36px);
   color: $white;
   text-transform: none;
 }
 
 .page-description__text {
+  @include indents-reset;
   @include font-title(14px, 14px);
   color: $white;
+}
+
+.page-description__button {
+  display: block;
+  margin: 0 auto;
+}
+
+.page-description__image-background {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-description {
+    min-height: 841px; //временное свойство
+  }
+
+  .page-description__wrapper {
+    background-color: $white;
+    padding-left: 80px;
+  }
+
+  .page-description__title {
+    display: block;
+    width: 415px;
+    padding-bottom: 10px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: $cod-gray;
+  }
+
+  .page-description__text {
+    padding-bottom: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: $cod-gray;
+  }
+
+  .page-description__button {
+    width: 245px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-description {
+    min-height: 606px; //временное свойство
+  }
+
+  .page-description__wrapper {
+    background-color: transparent;
+  }
+
+  .page-description__image-background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    display: block;
+    background-color: $grass;
+    width: 720px;
+    height: 796px;
+  }
 }

@@ -1,0 +1,41 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  min-height: 264px;
+  outline: 1px solid blue;
+}
+
+.page-header__toggle {
+  @include button-reset;
+
+  width: 69px;
+  height: 69px;
+
+  outline: 1px solid black;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: 1px solid orange;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 110px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    min-height: 170px;
+  }
+}

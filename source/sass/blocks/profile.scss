@@ -1,4 +1,15 @@
-.profile_description {
+.profile {
+  outline: 1px solid red;
+}
+
+.profile__description {
   @include font-title(14px, 18px);
   text-align: left;
+}
+
+@media (min-width: $tablet-width) {
+  .profile__description {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
