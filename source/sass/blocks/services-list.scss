@@ -3,10 +3,10 @@
 }
 
 .services-list__item {
-  min-height: 266px; //временное свойство
   margin-bottom: 20px;
+  padding: 21px;
+  padding-bottom: 19px;
 
-  outline: 1px solid blue;
   background-color: $light-grey;
 }
 
@@ -17,17 +17,85 @@
 .services-list__title {
   @include indents-reset;
   @include font-title(24px, 37px);
+  position: relative;
+  margin-bottom: 29px;
+  margin-left: 71px;
+  padding-top: 9px;
+
+  &::before {
+    @include pseudo;
+    top: 3px;
+    left: -70px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $apple;
+    background-repeat: no-repeat;
+  }
+
   text-align: left;
+}
+
+.services-list__title--slim::after {
+  @include pseudo;
+  left: -62px;
+  top: 2px;
+
+  width: 35px;
+  height: 49px;
+
+  background-image: url("../img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
+}
+
+.services-list__title--pro::after {
+  @include pseudo;
+  left: -79px;
+  top: 12px;
+
+  width: 67px;
+  height: 28px;
+
+  background-image: url("../img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
 }
 
 .services-list__description {
   @include font-main(14px, 18px);
+  @include indents-reset;
+  margin-bottom: 19px;
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid $black-transparency-10;
   text-align: left;
 }
 
 .services-list__link {
   @include font-title(16px, 16px);
+  position: relative;
+
   text-align: left;
+
+  &::after {
+    @include pseudo;
+    right: -35px;
+    top: 7px;
+
+    width: 25px;
+    height: 12px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    right: -44px;
+    width: 34px;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .services-list__link:active {
@@ -36,22 +104,81 @@
 
 @media (min-width: $tablet-width) {
   .services-list__item {
-    min-height: 372px; //временное свойство
+    @include indents-reset;
     margin-bottom: 30px;
+    padding-top: 76px;
+    padding-right: 53px;
+    padding-bottom: 58px;
+    padding-left: 53px;
   }
 
   .services-list__title {
+    @include indents-reset;
+    margin-bottom: 26px;
+
     font-size: 36px;
+
+    &::before {
+      top: 16px;
+      left: 393px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: $apple;
+    }
+  }
+
+  .services-list__title--slim::after {
+    @include pseudo;
+    left: 423px;
+    top: 4px;
+
+    width: 141px;
+    height: 194px;
+  }
+
+  .services-list__title--pro::after {
+    @include pseudo;
+    left: 359px;
+    top: 59px;
+
+    width: 268px;
+    height: 113px;
   }
 
   .services-list__description {
+    @include indents-reset;
+    margin-bottom: 56px;
     font-size: 16px;
     line-height: 24px;
+
+    border: 0;
+  }
+
+  .services-list__description--slim {
+    width: 375px;
+  }
+
+  .services-list__description--pro {
+    width: 344px;
   }
 
   .services-list__link {
     font-size: 20px;
     line-height: 20px;
+
+    &::after {
+      right: -47px;
+      top: 9px;
+
+      width: 24px;
+      height: 12px;
+    }
+
+    &:hover::after {
+      right: -56px;
+      width: 34px;
+    }
   }
 }
 
@@ -62,7 +189,58 @@
   }
 
   .services-list__item {
-    width: 572px;
-    margin-bottom: 0;
+    @include indents-reset;
+    width: 570px;
+    padding-top: 76px;
+    padding-right: 52px;
+    padding-bottom: 59px;
+    padding-left: 52px;
+  }
+
+  .services-list__title {
+    @include indents-reset;
+    margin-bottom: 74px;
+    margin-left: 163px;
+
+    &::before {
+      top: -29px;
+      left: -163px;
+
+      width: 100px;
+      height: 100px;
+
+      border-radius: 50%;
+      background-color: $apple;
+    }
+  }
+
+  .services-list__title--slim::after {
+    @include pseudo;
+    left: -149px;
+    top: -35px;
+
+    width: 71px;
+    height: 97px;
+  }
+
+  .services-list__title--pro::after {
+    @include pseudo;
+    left: -181px;
+    top: -7px;
+
+    width: 134px;
+    height: 57px;
+  }
+
+  .services-list__description {
+    margin-bottom: 31px;
+  }
+
+  .services-list__description--slim {
+    width: 465px;
+  }
+
+  .services-list__description--pro {
+    width: 450px;
   }
 }

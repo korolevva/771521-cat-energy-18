@@ -1,25 +1,8 @@
-.footer__developer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-
-  outline: 1px solid red;
-}
-
-.footer__developer-link {
-  @include font-title(16px, 16px);
-  text-align: left;
-  text-transform: none;
-}
-
-.footer__developer-link:active {
-  color: $black-transparency-30;
+.footer {
+  background-color: $light-grey;
 }
 
 .footer__wrapper-bottom {
-  min-height: 197px; //временно
-
   outline: 1px solid blue;
 }
 
@@ -28,15 +11,141 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-height: 54px; //временно
+  padding-top: 35px;
+  padding-bottom: 31px;
+  border-bottom: 1px solid $light-grey;
 
   outline: 1px solid red;
+
+  & .footer__icon {
+    fill: $cod-gray;
+  }
+
+  &:hover .footer__icon {
+    opacity: 0.8;
+  }
+
+  &:active .footer__icon {
+    opacity: 0.6;
+  }
+}
+
+.footer__developer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 13px;
+
+  outline: 1px solid red;
+}
+
+.footer__developer-link {
+  @include font-main(16px, 16px);
+  text-align: left;
+  text-transform: none;
+  outline: 1px solid red;
+  padding-bottom: 31px;
+
+  & .footer__developer-icon {
+    width: 41px;
+    height: auto;
+
+    fill: $brownish-grey;
+  }
+
+  &:hover .footer__developer-icon {
+    fill: $apple;
+  }
+
+  &:active .footer__developer-icon {
+    opacity: 0.3;
+  }
+}
+
+.footer__developer-link--text {
+  display: block;
+  padding-top: 18px;
+
+  &:active {
+    color: $grey-transparency-30;
+  }
+}
+
+.footer__developer-link--logo {
+  margin-right: -7px;
 }
 
 @media (min-width: $tablet-width) {
   .footer__wrapper-bottom {
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 150px;
+    padding-top: 50px;
+    padding-right: 23px;
+    padding-bottom: 50px;
+    border: 0;
+    outline: 1px solid black;
+  }
+
+  .footer__link {
+    @include indents-reset;
+    display: block;
+    align-items: flex-start;
+    width: 192px;
+    padding-top: 6px;
+    padding-left: 1px;
+  }
+
+  .footer__developer {
     justify-content: space-between;
-    min-height: 197px; //временно
+    width: 199px;
+    padding-top: 0;
+  }
+
+  .footer__developer-link {
+    @include indents-reset;
+  }
+
+  .footer__developer-link--text {
+    padding-top: 9px;
+    padding-left: 28px;
+  }
+
+  .footer__developer-link--logo {
+    @include indents-reset;
+    margin-top: -9px;
+  }
+
+  .footer__developer-icon {
+    width: 41px;
+    height: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__link,
+  .footer__developer {
+    width: 325px;
+  }
+
+  .footer__link {
+    padding-top: 9px;
+    padding-left: 0;
+  }
+
+  .footer__developer {
+    justify-content: flex-end;
+  }
+
+  .footer__developer-link--text {
+    padding-top: 13px;
+    padding-left: 0;
+  }
+
+  .footer__developer-link--logo {
+    margin-left: 16px;
+    margin-top: -4px;
+    margin-right: -7px;
   }
 }

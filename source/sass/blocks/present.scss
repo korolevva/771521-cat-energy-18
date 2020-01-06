@@ -1,47 +1,105 @@
 .present {
-  min-height: 289px;
   width: 100%;
-  padding-top: 159px;
+  margin-bottom: 35px;
+  padding-top: 64px;
+  padding-bottom: 42px;
 
   background-color: $apple;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.present__icon {
+  display: block;
+  width: 56px;
+  height: 61px;
+  margin: 0 auto;
+  margin-bottom: 62px;
+
+  background-image: url("../img/icon-gift.svg");
+  background-size: 56px 61px;
+
+  & path {
+    fill: $white;
+  }
 }
 
 .present__description {
   @include indents-reset;
   @include font-main(16px, 20px);
+
   width: 165px;
   margin: 0 auto;
   color: $white;
 
   outline: 1px solid white;
+
+  // &::before {
+  //   @include pseudo;
+  //   top: -30px;
+  //   left: 50%;
+
+  //   width: 56px;
+  //   height: 61px;
+
+  //   background-image: url("../img/icon-gift.svg");
+  //   background-size: 56px 61px;
+
+  //   transform: translateX(-50%);
+  // }
 }
 
 @media (min-width: $tablet-width) {
   .present {
-    min-height: 200px;
-    padding-top: 75px;
-    padding-left: 424px;
+    @include indents-reset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 76px;
+    padding-top: 72px;
+    padding-right: 120px;
+    padding-bottom: 68px;
+    padding-left: 90px;
 
-    background-color: $apple;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .present__icon {
+    @include indents-reset;
+    margin-top: -8px;
   }
 
   .present__description {
+    @include indents-reset;
     text-align: left;
   }
 }
 
 @media (min-width: $desktop-width) {
   .present {
-    width: auto;
-    min-height: 289px;
-    padding-top: 190px;
-    padding-right: 43px;
-    padding-left: 43px;
+    @include indents-reset;
+    @include indents-reset;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-end;
+    width: 244px;
+    padding-top: 65px;
+    padding-bottom: 42px;
 
     background-color: $apple;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  .present__icon {
+    @include indents-reset;
+    margin: 0 auto;
+    margin-bottom: 61px;
   }
 
   .present__description {
+    @include indents-reset;
+    margin: 0 auto;
+
     text-align: center;
   }
 }
