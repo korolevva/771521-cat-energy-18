@@ -1,5 +1,7 @@
 .extra-products {
   width: 100%;
+  padding-bottom: 25px;
+
   outline: 1px solid blue;
 }
 
@@ -10,13 +12,39 @@
 .extra-products__title {
   @include indents-reset;
   @include font-title(24px, 24px);
+  position: relative;
+
+  margin-bottom: 14px;
+  padding-top: 28px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid $pinkish-grey;
+
   text-align: left;
   text-transform: none;
+
+  &::after {
+    @include pseudo;
+    top: 42px;
+    right: -20px;
+
+    width: 53px;
+    height: 3px;
+
+    background-color: $apple;
+  }
+}
+
+.extra-products__item {
+  margin-bottom: 14px;
+
+  border-bottom: 1px solid $pinkish-grey;
 }
 
 .extra-products__type {
   @include indents-reset;
   @include font-title(16px, 16px);
+  margin-bottom: 12px;
+
   text-align: left;
   color: $mine-shaft;
 
@@ -30,6 +58,7 @@
 
 .extra-products__definition-list {
   @include indents-reset;
+  margin-bottom: 15px;
 }
 
 .extra-products__amount {
@@ -48,36 +77,85 @@
 
 .extra-products__button {
   width: 100%;
+  margin-bottom: 17px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
   font-size: 16px;
-  font-weight: 20px;
 
   outline: 1px solid red;
 }
 
 @media (min-width: $tablet-width) {
-  .extra-products__item {
-    padding: 38px;
+  .extra-products {
+    padding-bottom: 69px;
+  }
 
+  .extra-products__title {
+    margin-bottom: 45px;
+    padding-top: 62px;
+    padding-left: 37px;
+    padding-right: 37px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      @include pseudo;
+      top: 84px;
+      left: -30px;
+
+      width: 28px;
+      height: 3px;
+
+      background-color: $apple;
+    }
+
+    &::after {
+      top: 84px;
+      right: -30px;
+
+      width: 327px;
+      height: 3px;
+    }
+  }
+
+  .extra-products__item {
+    margin-bottom: 0;
+    padding-top: 25px;
+    padding-right: 35px;
+    padding-left: 37px;
+    padding-bottom: 27px;
+
+    border: solid 1px $mercury;
+    border-bottom: 0;
     outline: 1px solid orange;
+  }
+
+  .extra-products__item:last-child {
+    border-bottom: solid 1px #e6e6e6;
   }
 
   .extra-products__item-wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 
     outline: 1px solid blue;
   }
 
-  .extra-products__title {
-    font-size: 36px;
-    line-height: 36px;
-  }
-
   .extra-products__type {
-    margin-right: auto;
+    margin-left: 2px;
+    margin-bottom: 26px;
 
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .extra-products__definition-list {
+    padding-top: 4px;
+    margin-bottom: 0;
   }
 
   .extra-products__amount,
@@ -87,23 +165,66 @@
     text-align: right;
   }
 
-  .extra-products__amount {
-    margin-right: 52px;
+  // .extra-products__amount {
+  //   margin-right: 52px;
+  // }
+
+  .extra-products__price {
+    min-width: 96px;
   }
 
   .extra-products__button {
     width: 100%;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .extra-products-wrapper {
+    justify-content: flex-start;
+    margin-bottom: 86px;
+  }
+
   .extra-products {
-    width: auto;
+    width: 73.5%;
+    margin-right: 79px;
+    padding-bottom: 0;
+  }
+
+  .extra-products__title {
+    margin-bottom: 46px;
+    padding-top: 68px;
+    padding-left: 0;
+
+    border-bottom: 0;
+
+    &::before {
+      top: 90px;
+      left: -110px;
+      width: 70px;
+      height: 3px;
+    }
+
+    &::after {
+      top: 90px;
+      right: -475px;
+      width: 998px;
+      height: 3px;
+    }
   }
 
   .extra-products__item {
-    padding: 27px;
+    padding-top: 26px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 
+    border-top: solid 1px $pinkish-grey;
+    // border-bottom: solid 1px $pinkish-grey;
+    border-left: 0;
+    border-right: 0;
     outline: 1px solid orange;
   }
 
@@ -117,19 +238,25 @@
 
   .extra-products__type {
     width: 325px;
+    margin-left: 0;
+    margin-bottom: 25px;
   }
 
   .extra-products__amount {
+    width: 244px;
+
     outline: 1px solid blue;
   }
 
   .extra-products__price {
-    width: 81px;
+    min-width: auto;
   }
 
   .extra-products__button {
     width: 245px;
     min-height: 40px;
+    margin-top: -11px;
+    margin-left: auto;
   }
 
   .extra-products__amount,

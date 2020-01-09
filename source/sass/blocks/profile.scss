@@ -1,15 +1,37 @@
 .profile {
-  outline: 1px solid red;
+  padding-bottom: 17px;
 }
 
 .profile__description {
+  @include indents-reset;
   @include font-title(14px, 18px);
+  width: 230px;
+  margin-bottom: 38px;
+
   text-align: left;
 }
 
 @media (min-width: $tablet-width) {
+  .profile.container {
+    padding-left: 70px;
+    padding-right: 68px;
+  }
+
   .profile__description {
+    width: 330px;
+    margin-bottom: 66px;
+
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile.container {
+    padding: 0 40px;
+  }
+
+  .profile__description {
+    margin-bottom: 65px;
   }
 }

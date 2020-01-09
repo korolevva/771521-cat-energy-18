@@ -1,15 +1,20 @@
 .page-description {
-  min-height: 500px; //временное сво-во
-  outline: 1px solid blue;
-}
+  padding-top: 27px;
 
-.page-description__wrapper {
-  background-color: $apple;
+  background-image:
+    url("../img/index-can-mobile@1x.png"),
+    url("../img/index-background-mobile@1x.jpg"),
+    linear-gradient(to bottom, $dirty-green 64%, $white 36%);
+  background-size: 280px 270px, 320px 305px, 100% 99%;
+  background-repeat: no-repeat;
+  background-position: center 167px, center top, center top;
 }
 
 .page-description__title {
   @include indents-reset;
   @include font-title(36px, 36px);
+  margin-bottom: 25px;
+
   color: $white;
   text-transform: none;
 }
@@ -17,32 +22,52 @@
 .page-description__text {
   @include indents-reset;
   @include font-title(14px, 14px);
+  margin-bottom: 302px;
+
   color: $white;
 }
 
 .page-description__button {
   display: block;
   margin: 0 auto;
-}
-
-.page-description__image-background {
-  display: none;
+  width: 280px;
+  margin-bottom: 22px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 @media (min-width: $tablet-width) {
   .page-description {
-    min-height: 841px; //временное свойство
+    position: relative;
+
+    min-height: 837px;
+
+    background: none;
+
+    &::after {
+      @include pseudo;
+      top: 228px;
+      left: 29px;
+      z-index: -1;
+
+      width: 709px;
+      height: 609px;
+
+      background-image: url("../img/index-can-tablet@1x.jpg");
+      background-size: 709px 609px;
+      background-position: top center;
+    }
   }
 
   .page-description__wrapper {
-    background-color: $white;
-    padding-left: 80px;
+    padding-left: 88px;
   }
 
   .page-description__title {
     display: block;
     width: 415px;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
+
     font-size: 60px;
     line-height: 60px;
     text-align: left;
@@ -50,6 +75,8 @@
   }
 
   .page-description__text {
+    @include indents-reset;
+    margin-bottom: 38px;
     padding-bottom: 10px;
     font-size: 20px;
     line-height: 20px;
@@ -58,27 +85,45 @@
   }
 
   .page-description__button {
+    @include indents-reset;
     width: 245px;
+    margin-left: 89px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-description {
-    min-height: 606px; //временное свойство
+    min-height: 501px;
+    margin-bottom: 80px;
+
+    background-image: linear-gradient(to left, $dirty-green 49.4%, $white 49.4%);
+
+    background-size: 100% 100%;
+
+    z-index: -1;
+
+    &::after {
+      display: none;
+    }
   }
 
   .page-description__wrapper {
+    padding-left: 81px;
+
     background-color: transparent;
   }
 
-  .page-description__image-background {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: -1;
-    display: block;
-    background-color: $grass;
-    width: 720px;
-    height: 796px;
+  .page-description__text {
+    margin-bottom: 43px;
+  }
+
+  .page-description__button {
+    @include indents-reset;
+    margin-left: 81px;
+    margin-bottom: 268px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }

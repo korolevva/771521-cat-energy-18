@@ -42,3 +42,13 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin pseudo ($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin outline ($color: red) {
+  outline: 1px solid $color;
+}
