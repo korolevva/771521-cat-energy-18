@@ -93,7 +93,7 @@
   &::after {
     @include pseudo;
     top: -273px;
-    left: 82px;
+    left: calc((100% - 320px) / 2);
 
     width: 320px;
     height: 240px;
@@ -108,7 +108,20 @@
 
   &::after {
     display: none;
-    background-image: url("/img/after-mobile@1x.png");
+    background-image: url("../img/after-mobile@1x.png");
+  }
+}
+
+@media (min-resolution: $retina-dppx) {
+  .living-example__wrapper-toggle {
+    &::before {
+      background-image: url("../img/before-mobile@2x.png");
+    }
+
+    &::after {
+      display: none;
+      background-image: url("../img/after-mobile@2x.png");
+    }
   }
 }
 
@@ -231,14 +244,14 @@
     padding-top: 363px;
     padding-bottom: 69px;
 
-    background-image: linear-gradient(to left, $white-seven 49%, $light-grey 49%);
+    background-image: linear-gradient(to left, $white-seven 50%, $light-grey 50%);
     background-size: 100% 100%;
 
     &::before,
     &::after {
       @include pseudo;
       top: -168px;
-      left: 46px;
+      left: calc((100% - 676px) / 2);
 
       width: 690px;
       height: 517px;
@@ -257,6 +270,22 @@
       background-image: url("../img/after-tablet@1x.png");
 
       clip: rect(0, 517px, 690px, 338px);
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    .living-example__wrapper-toggle {
+      &::before {
+        background-image: url("../img/before-tablet@1x.png");
+
+        clip: rect(0, 338px, 690px, 0);
+      }
+
+      &::after {
+        background-image: url("../img/after-tablet@1x.png");
+
+        clip: rect(0, 517px, 690px, 338px);
+      }
     }
   }
 
@@ -425,6 +454,22 @@
       background-image: url("../img/after-desktop@1x.png");
 
       clip: rect(0, 517px, 690px, 365px);
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    .living-example__wrapper-toggle {
+      &::before {
+        background-image: url("../img/before-desktop@2x.png");
+
+        clip: rect(0, 365px, 690px, 0);
+      }
+
+      &::after {
+        background-image: url("../img/after-desktop@2x.png");
+
+        clip: rect(0, 517px, 690px, 365px);
+      }
     }
   }
 
