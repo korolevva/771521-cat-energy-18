@@ -84,7 +84,7 @@
     @include indents-reset;
     position: absolute;
     top: 95px;
-    left: 40px;
+    left: calc((100% - 1220px) / 2);
 
     justify-content: flex-start;
     width: 570px;

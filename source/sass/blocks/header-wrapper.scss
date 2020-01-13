@@ -29,4 +29,13 @@
       background-size: 552px 499px;
     }
   }
+
+  @media (min-resolution: $retina-dppx) {
+    .header-wrapper {
+      &::before {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: cover;
+      }
+    }
+  }
 }
