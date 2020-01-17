@@ -23,12 +23,8 @@
   margin: 0 auto;
   margin-bottom: 62px;
 
-  background-image: url("../img/icon-gift.svg");
   background-size: 56px 61px;
-
-  & path {
-    fill: $white;
-  }
+  fill: $white;
 }
 
 .present__description {
