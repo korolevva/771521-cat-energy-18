@@ -1,6 +1,7 @@
 @media (min-width: $desktop-width) {
   .header-wrapper {
     position: relative;
+
     background-image: linear-gradient(to left, $dirty-green 49.4%, $white 49.4%);
     background-size: 100% 100%;
 
@@ -16,29 +17,13 @@
       background-repeat: no-repeat;
       background-size: auto;
     }
-
-    &::after {
-      @include pseudo;
-      top: 142px;
-      right: calc(39.8vw - 276px);
-      width: 552px;
-      height: 499px;
-
-      background-image: url("../img/index-can-desktop@1x.png");
-      background-repeat: no-repeat;
-      background-size: 552px 499px;
-    }
   }
 
   @media (min-resolution: $retina-dppx) {
     .header-wrapper {
       &::before {
         background-image: url("../img/index-background-desktop@2x.jpg");
-        background-size: contain;
-      }
-
-      &::after {
-        background-image: url("../img/index-can-desktop@1x.png");
+        background-size: cover;
       }
     }
   }

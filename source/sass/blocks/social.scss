@@ -7,21 +7,19 @@
   padding-left: 73px;
   padding-bottom: 10px;
 
-  border-bottom: 1px solid #f2f2f2;
-  outline: 1px solid red;
+  border-bottom: 1px solid $black-transparency-10;
 }
 
 .social__item {
-  outline: 1px solid red;
   margin-right: 38px;
   margin-bottom: 5px;
 }
 
-.social__link {
-  & .social__icon {
-    fill: $brownish-grey;
-  }
+.social__link .social__icon {
+  fill: $brownish-grey;
+}
 
+.social__link {
   &:hover .social__icon {
     fill: $apple;
   }

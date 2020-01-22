@@ -10,7 +10,6 @@ var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var server = require("browser-sync").create();
 var imagemin = require("gulp-imagemin");
-var imageminJpegtran = require('imagemin-jpegtran');
 var svgstore = require("gulp-svgstore");
 var webp = require("gulp-webp");
 var del = require("del");
@@ -79,7 +78,7 @@ gulp.task("clean", function () {
 gulp.task("jsmin", function () {
   return gulp.src("source/js/*.js")
     .pipe(jsmin())
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("build/js"));
 });
 
@@ -116,5 +115,5 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean", "copy", "webp", "jsmin", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "images", "webp", "jsmin", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));

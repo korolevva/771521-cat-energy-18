@@ -2,10 +2,6 @@
   background-color: $light-grey;
 }
 
-.footer__wrapper-bottom {
-  outline: 1px solid blue;
-}
-
 .footer__link {
   display: flex;
   flex-wrap: wrap;
@@ -13,9 +9,8 @@
   align-items: center;
   padding-top: 35px;
   padding-bottom: 31px;
-  border-bottom: 1px solid $light-grey;
 
-  outline: 1px solid red;
+  border-bottom: 1px solid $black-transparency-10;
 
   & .footer__icon {
     fill: $cod-gray;
@@ -36,19 +31,16 @@
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 13px;
-
-  outline: 1px solid red;
 }
 
 .footer__developer-link {
   @include font-main(16px, 16px);
   text-align: left;
   text-transform: none;
-  outline: 1px solid red;
 
   & .footer__developer-icon {
     width: 41px;
-    height: auto;
+    height: 52px;
 
     fill: $brownish-grey;
   }
@@ -84,8 +76,8 @@
     padding-top: 50px;
     padding-right: 23px;
     padding-bottom: 50px;
+
     border: 0;
-    outline: 1px solid black;
   }
 
   .footer__link {
@@ -95,6 +87,7 @@
     width: 192px;
     padding-top: 6px;
     padding-left: 1px;
+    border-bottom: 0;
   }
 
   .footer__developer {
@@ -115,11 +108,6 @@
   .footer__developer-link--logo {
     @include indents-reset;
     margin-top: -9px;
-  }
-
-  .footer__developer-icon {
-    width: 41px;
-    height: auto;
   }
 }
 

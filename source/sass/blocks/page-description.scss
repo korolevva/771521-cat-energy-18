@@ -1,8 +1,7 @@
 .page-description {
   padding-top: 27px;
 
-  background-image:
-    url("../img/index-can-mobile@1x.png"),
+  background-image: url("../img/index-can-mobile@1x.png"),
     url("../img/index-background-mobile@1x.jpg"),
     linear-gradient(to bottom, $dirty-green 64%, $white 36%);
   background-size: 280px 270px, 320px 305px, 100% 99%;
@@ -12,8 +11,7 @@
 
 @media (min-resolution: $retina-dppx) {
   .page-description {
-    background-image:
-      url("../img/index-can-mobile@2x.png"),
+    background-image: url("../img/index-can-mobile@2x.png"),
       url("../img/index-background-mobile@2x.jpg"),
       linear-gradient(to bottom, $dirty-green 64%, $white 36%);
   }
@@ -52,11 +50,15 @@
     min-height: 837px;
 
     background: none;
+  }
+
+  .page-description .container {
+    position: relative;
 
     &::after {
       @include pseudo;
-      top: 228px;
-      left: calc((100% - 694px) / 2);
+      top: 201px;
+      left: 29px;
       z-index: -1;
 
       width: 709px;
@@ -64,7 +66,15 @@
 
       background-image: url("../img/index-can-tablet@1x.jpg");
       background-size: 709px 609px;
-      background-position: top center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+    .page-description .container {
+      &::after {
+        background-image: url("../img/index-can-tablet@2x.jpg");
+      }
     }
   }
 
@@ -87,6 +97,7 @@
     @include indents-reset;
     margin-bottom: 38px;
     padding-bottom: 10px;
+
     font-size: 20px;
     line-height: 20px;
     text-align: left;
@@ -104,15 +115,20 @@
 
 @media (min-width: $desktop-width) {
   .page-description {
+    z-index: -1;
+
     min-height: 501px;
     margin-bottom: 80px;
 
     background-image: linear-gradient(to left, $dirty-green 49.4%, $white 49.4%);
-
     background-size: 100% 100%;
 
-    z-index: -1;
+    &::after {
+      display: none;
+    }
+  }
 
+  .page-description .container {
     &::after {
       display: none;
     }

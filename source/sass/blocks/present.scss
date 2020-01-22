@@ -34,22 +34,6 @@
   width: 165px;
   margin: 0 auto;
   color: $white;
-
-  outline: 1px solid white;
-
-  // &::before {
-  //   @include pseudo;
-  //   top: -30px;
-  //   left: 50%;
-
-  //   width: 56px;
-  //   height: 61px;
-
-  //   background-image: url("../img/icon-gift.svg");
-  //   background-size: 56px 61px;
-
-  //   transform: translateX(-50%);
-  // }
 }
 
 @media (min-width: $tablet-width) {

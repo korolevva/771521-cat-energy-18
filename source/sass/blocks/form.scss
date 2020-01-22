@@ -1,7 +1,3 @@
-.form__fieldset-wrapper {
-  outline: 1px solid blue;
-}
-
 .form__fieldset {
   @include fieldset-reset;
 }
@@ -96,6 +92,7 @@
 
 .form__fieldset--programs {
   position: relative;
+
   padding-top: 27px;
   padding-bottom: 27px;
 
@@ -131,6 +128,7 @@
 
 .form__input--radio + .form__label {
   position: relative;
+
   padding-left: 46px;
 
   &::before {
@@ -202,6 +200,7 @@
 
 .form__icon {
   position: absolute;
+
   fill: $mine-shaft;
 
   &--latter {
@@ -257,6 +256,7 @@
 
 .form__legend--comment {
   position: relative;
+
   display: block;
   margin-bottom: 35px;
 
@@ -358,6 +358,7 @@
 .form__textarea {
   @include font-title(16px, 18px);
   text-align: left;
+
   color: $tundora;
   border: 1px solid $mercury;
 }
@@ -382,12 +383,13 @@
 }
 
 .form__button {
-  font-size: 16px;
-  line-height: 20px;
+  width: 280px;
   margin-bottom: 7px;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 280px;
+
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .profile__text {
@@ -586,17 +588,16 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: 0;
-    outline: 1px solid red;
+  }
 
-    & .form__item {
-      width: calc((100% - 60px) / 2);
-      margin-bottom: 49px;
-      padding-left: 58px;
-    }
+  .form__list--additional-goods .form__item {
+    width: calc((100% - 60px) / 2);
+    margin-bottom: 49px;
+    padding-left: 58px;
+  }
 
-    & .form__item:nth-child(2n-1) {
-      margin-right: 59px;
-    }
+  .form__list--additional-goods .form__item:nth-child(2n-1) {
+    margin-right: 59px;
   }
 
   .form__input--checkbox + .form__label {
@@ -646,17 +647,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
 
-    & .form__item {
-      width: calc(100% - 650px);
-      margin-bottom: 0;
-    }
+  .form__list--contacts .form__item {
+    width: calc(100% - 650px);
+    margin-bottom: 0;
   }
 
   .form__fieldset--info {
     width: calc(100% - 650px);
     padding-bottom: 0;
-    outline: 1px solid red;
   }
 
   .form__fieldset--programs {

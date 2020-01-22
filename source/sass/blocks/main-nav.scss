@@ -7,3 +7,9 @@
     display: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-header__wrapper {
+    margin-right: auto;
+  }
+}

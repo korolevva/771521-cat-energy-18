@@ -6,8 +6,6 @@
 .advantages-list__item {
   margin-bottom: 26px;
 
-  outline: 1px solid tomato;
-
   &--number1 .advantages-list__description::after {
     background-image: url("../img/advantage-leaf@1x.png");
   }
@@ -107,6 +105,7 @@
     @include indents-reset;
     width: 217px;
     margin-bottom: 61px;
+
     font-size: 16px;
     line-height: 24px;
     text-align: left;

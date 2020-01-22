@@ -54,7 +54,6 @@
 @media (min-width: $desktop-width) {
   .main__title--catalog {
     @include indents-reset;
-    outline: 1px solid red;
     margin-top: -7px;
     padding-bottom: 29px;
   }
