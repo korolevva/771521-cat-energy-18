@@ -37,6 +37,10 @@
   }
 }
 
+.page-header__toggle--hide {
+  display: none;
+}
+
 .page-header__toggle svg {
   fill: $mine-shaft;
 }

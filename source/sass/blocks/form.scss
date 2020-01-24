@@ -85,9 +85,13 @@
     fill: $apple;
   }
 
-  &--error + .form__icon {
-    fill: $color-error;
+  &:not(:placeholder-shown):invalid {
+    border: 2px solid $color-error;
   }
+}
+
+.form__input:not(:placeholder-shown):invalid + .form__icon {
+  fill: $color-error;
 }
 
 .form__fieldset--programs {
@@ -365,16 +369,14 @@
 
 .form__input:hover,
 .form__textarea:hover {
-  border: 1px solid $pinkish-grey;
+  border-color: $pinkish-grey;
+  box-shadow: 0 0 0 1px $pinkish-grey;
 }
 
 .form__input:focus,
 .form__textarea:focus {
-  border: 2px solid $color-border-input-active;
-}
-
-.form__input--error {
-  border: 2px solid $color-error;
+  border-color: $color-border-input-active;
+  box-shadow: 0 0 0 1px $color-border-input-active;
 }
 
 .form__input::placeholder,

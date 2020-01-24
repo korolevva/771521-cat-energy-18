@@ -164,6 +164,7 @@
       @include pseudo;
       top: 137px;
       left: 1px;
+      z-index: -1;
 
       width: 322px;
       height: 430px;
@@ -281,6 +282,13 @@
 
   .products__item:last-child {
     padding-top: 300px;
+
+    &::before {
+      top: 136px;
+      left: 2px;
+
+      width: 243px;
+    }
   }
 
   .products__image {
