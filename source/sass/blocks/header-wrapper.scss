@@ -1,6 +1,7 @@
 @media (min-width: $desktop-width) {
   .header-wrapper {
     position: relative;
+    z-index: 1;
 
     background-image: linear-gradient(to left, $dirty-green 49.4%, $white 49.4%);
     background-size: 100% 100%;
@@ -8,7 +9,7 @@
     &::before {
       @include pseudo;
       top: 0;
-      left: 50.6%;
+      right: 1px;
 
       width: 50%;
       height: 696px;
